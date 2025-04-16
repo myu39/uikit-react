@@ -1,0 +1,8 @@
+// Functions
+@function getRem($px) {
+  @return calc($px / 16 * 1rem);
+}
+
+@function getPx($num) {
+  @return calc($num * 1px)
+}

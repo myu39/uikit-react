@@ -1,0 +1,33 @@
+@use "./variables" as v;
+@use "./globals" as g;
+
+:root {
+  --base-font-size: #{g.getRem(v.$base-font-size)};
+  --base-font-weight: #{v.$base-font-weight};
+  --base-line-height: #{v.$base-line-height};
+
+  // border color
+  --border-color-primary: #{v.$color-base};
+
+  // Color
+  --color-primary: #{v.$color-primary};
+  --color-base-reverse: #{v.$color-base-reverse};
+
+  // font size
+  // title
+  --h2-font-size: #{v.$h2-font-size};
+  --h3-font-size: #{v.$h3-font-size};
+  --h4-font-size: #{v.$h4-font-size};
+  --h5-font-size: #{v.$h5-font-size};
+  --h6-font-size: #{v.$h6-font-size};
+
+  // margin sizes are calulated based on the base font size
+  --margin-xxl: #{v.$space-xxl};
+  --margin-xl: #{v.$space-xl};
+  --margin-l: #{v.$space-l};
+  --margin-m: #{v.$space-m};
+  --margin-s: #{v.$space-s};
+  --margin-xs: #{v.$space-xs};
+  
+  --min-width: #{v.$min-width};
+}

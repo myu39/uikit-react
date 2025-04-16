@@ -1,0 +1,30 @@
+@use "./globals" as g;
+
+$base-font-size: 18;  //(px)
+$base-font-weight: 400;
+$base-line-height: 1;
+
+// Colour
+$color-base: #000;
+$color-base-reverse: #fff;
+$color-primary: #2359A1;
+
+// font size
+// title
+
+$h2-font-size: calc(g.getPx($base-font-size) * 1.5);
+$h3-font-size: calc(g.getPx($base-font-size) * 1.25);
+$h4-font-size: g.getPx($base-font-size);
+$h5-font-size: g.getPx($base-font-size);
+$h6-font-size: g.getPx($base-font-size);
+
+
+// space
+$space-xxl: calc(g.getPx($base-font-size) * 3);
+$space-xl: calc(g.getPx($base-font-size) * 2.5);
+$space-l: calc(g.getPx($base-font-size) * 2);
+$space-m: calc(g.getPx($base-font-size) * 1.5);
+$space-s: g.getPx($base-font-size);
+$space-xs: calc(g.getPx($base-font-size) * 0.5);
+
+$min-width: 320px;

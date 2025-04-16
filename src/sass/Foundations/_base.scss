@@ -1,0 +1,58 @@
+@use "variables" as v;
+@use "globals" as g;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+picture {
+  border-style: none;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+html {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  touch-action: manipulation;
+}
+
+body {
+  // color: color(--c-font-primary);
+  font-size: var(--base-font-size);
+  font-weight: var(--base-font-weight);
+  font-family: 
+    'Noto Sans JP',
+    Meiryo,
+    sans-serif;
+  line-height: var(--base-line-height);
+  transition: all 0.5s ease-out;
+  min-width: var(--min-width);
+  
+  // @include media('tb') {
+  //   font-size: get_px($font-pc);
+  // }
+}
+
+dt {
+  font-weight: 400;
+}
+
+th {
+  font-weight: 400;
+}
