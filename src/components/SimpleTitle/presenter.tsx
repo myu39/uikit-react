@@ -1,7 +1,7 @@
-import { SimpleTitleType } from "./index.types";
-import styles from "./style.module.scss";
+import styles from "./styles.module.scss";
+import { SimpleTitleProps } from "./types";
 
-export const SimpleTitlePresentator = ({title, tagType} : SimpleTitleType) => {
+export const SimpleTitlePresenter = ({title, tagType} : SimpleTitleProps) => {
   const Tag = tagType
 
   const baseClass = "c-simple-title";

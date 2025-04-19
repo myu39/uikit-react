@@ -1,0 +1,44 @@
+{
+  "question": {
+    "componentName": "Type a component name (Recomend `PascalCase`): "
+  },
+  "typeChoiceOption": {
+    "message": "Which type of component you want to create?",
+    "choices": [
+      {"name": "Component", "value": "component"},
+      {"name": "Feature", "value": "feature"}
+    ]
+  },
+  "isContinueAnother": {
+    "message": "Do you want to create another component?",
+    "choices": [
+      {"name": "Yes", "value": true},
+      {"name": "No", "value": false}
+    ],
+    "default": false
+  },
+  "namingConvention": {
+    "componentName": "pascalCase"
+  },
+  "destination": {
+    "component": "./src/components/",
+    "feature": "./src/features/"
+  },
+  "isContinue": {
+    "message": "[[ ATTENTION ]] Component name already exists. If continuing, existing files are overwritten.\n Want to proceed? : ",
+    "choices": [
+      {"name": "Yes", "value": true},
+      {"name": "No", "value": false}
+    ],
+    "default": false
+  },
+  "componentSet": [
+    "index.stories.tsx",
+    "index.tsx",
+    "index.test.tsx",
+    "presenter.tsx",
+    "presenter.test.tsx",
+    "styles.module.scss",
+    "types.ts"
+  ]
+}

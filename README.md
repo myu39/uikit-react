@@ -1,5 +1,17 @@
 # React + TypeScript + Vite
 
+## Naming Conventions
+
+| Purpose | Naming Convention | Example |
+| --- | --- | --- |
+| functions | camelCase | `fetchData()`, `sendEmail()` |
+| variables | camelCase | `userName`, `totalPrice` |
+| classes | PascalCase | `User`, `ProductService` |
+| types, interfaces | PascalCase | `UserInfo`, `ApiResponse` |
+| Constants | UPPER_SNAKE_CASE | `MAX_RETRIES`, `DEFAULT_TIMEOUT` |
+| Directory | kabab-case | `format-date` |
+| File | camelCase | `formatDate.ts` |
+
 ## Git Commit Message
 
 | Prefix | Description |
