@@ -10,9 +10,7 @@ const namingConventionPatterns: Record<NamingConventionType, RegExp> = {
   lowercase: /^[a-z0-9]+$/
 };
 
-const checkNamingConvention = (target: string, namingType: NamingConventionType) => {
+export const isCorrectNamingConvention = (target: string, namingType: NamingConventionType) => {
   const pattern = namingConventionPatterns[namingType];
   return pattern.test(target);
 }
-
-export default checkNamingConvention

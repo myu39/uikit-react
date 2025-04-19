@@ -1,8 +1,8 @@
-import { NamingConventionType } from "../check-naming-convention/NamingConvention";
 import { createFilesFromList } from "../create-files-from-list/createFilesFromList";
 import { getBooleanFromPrompt } from "../get-boolean-from-prompt/getBooleanFromPrompt";
 import { getSelectedValueFromPrompt } from "../get-selected-value-from-prompt/getSelectedValueFromPrompt";
 import { getValidatedInputByNamingType } from "../get-validated-input-by-naming-type/getValidatedInputByNamingType";
+import { NamingConventionType } from "../is-correct-naming-convention/NamingConvention";
 import { isExistsDirectory } from "../is-exists-directory/isExistsDirectory";
 import * as settings from './settings.json';
 

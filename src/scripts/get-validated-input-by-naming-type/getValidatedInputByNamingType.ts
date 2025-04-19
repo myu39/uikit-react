@@ -1,8 +1,8 @@
 import inquirer from "inquirer"
-import checkNamingConvention from "../check-naming-convention/checkNamingConvention"
+import { isCorrectNamingConvention } from "../is-correct-naming-convention/isCorrectNamingConvention"
 
-import { NamingConventionType } from "../check-naming-convention/NamingConvention"
 import * as settings from "../generate-component-set/settings.json"
+import { NamingConventionType } from "../is-correct-naming-convention/NamingConvention"
 
 // You need to install inquirer module.
 // You can install by `npm i -D inquirer`.
@@ -27,7 +27,7 @@ export const getValidatedInputByNamingType = async(namingType: NamingConventionT
       },
     ])
 
-    if (checkNamingConvention (componentName, namingType)) {
+    if (isCorrectNamingConvention (componentName, namingType)) {
       return componentName
     }
 
