@@ -1,21 +1,18 @@
 import { NamingConventionType } from "./NamingConvention";
 
-function isPascalCase(str: string): boolean {
-  return /^[A-Z][a-zA-Z0-9]*$/.test(str);
-}
+const namingConventionPatterns: Record<NamingConventionType, RegExp> = {
+  // Key is one of NamingConventionType, and value is a RegExp
+  pascalCase: /^[A-Z][a-zA-Z0-9]*$/,
+  camelCase: /^[a-z][a-zA-Z0-9]*$/,
+  snake_case: /^[a-z0-9]+(_[a-z0-9]+)*$/,
+  "kebab-case": /^[a-z0-9]+(-[a-z0-9]+)*$/,
+  UPPER_CASE: /^[A-Z0-9]+(_[A-Z0-9]+)*$/,
+  lowercase: /^[a-z0-9]+$/
+};
 
 const checkNamingConvention = (target: string, namingType: NamingConventionType) => {
-  switch (namingType) {
-    case "pascalCase":
-      if (isPascalCase(target)) {
-        return true
-      } else {
-        return false
-      }
-      break;
-    default:
-      return false
-  }
+  const pattern = namingConventionPatterns[namingType];
+  return pattern.test(target);
 }
 
 export default checkNamingConvention
