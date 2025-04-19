@@ -3,7 +3,7 @@ import { createFilesFromList } from "../create-files-from-list/createFilesFromLi
 import { getBooleanFromPrompt } from "../get-boolean-from-prompt/getBooleanFromPrompt";
 import { getSelectedValueFromPrompt } from "../get-selected-value-from-prompt/getSelectedValueFromPrompt";
 import { getValidatedInputByNamingType } from "../get-validated-input-by-naming-type/getValidatedInputByNamingType";
-import { isDirectoryNameDuplicated } from "../is-directory-name-duplicated/isDirectoryNameDuplicated";
+import { isExistsDirectory } from "../is-exists-directory/isExistsDirectory";
 import * as settings from './settings.json';
 
 const getDestination = (componentType: string, componentName: string) => {
@@ -29,7 +29,7 @@ const gcs = async () => {
 
     const destination = getDestination(componentType, componentName)
 
-    if (isDirectoryNameDuplicated(destination)) {
+    if (isExistsDirectory(destination)) {
       if (await getBooleanFromPrompt(settings.isContinue)) {
         await createFilesFromList(settings.componentSet, destination)
       } else {

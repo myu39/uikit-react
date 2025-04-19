@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, test } from 'vitest'
 import { SimpleTitlePresenter } from './presenter'
-import styles from "./style.module.scss"
+import styles from "./styles.module.scss"
 import { SimpleTitleProps } from './types'
 
 describe('SimpleTitlePresentator', () => {
