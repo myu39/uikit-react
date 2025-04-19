@@ -1,5 +1,4 @@
 import inquirer from "inquirer"
-import * as settings from "../../../features/gcs/settings.json"
 import { NamingConventionType } from "../../utils/is-correct-naming-convention/NamingConvention"
 import { isCorrectNamingConvention } from "../../utils/is-correct-naming-convention/isCorrectNamingConvention"
 
@@ -12,9 +11,8 @@ import { isCorrectNamingConvention } from "../../utils/is-correct-naming-convent
  * @returns string as being input
  */
 
-export const getValidatedInputByNamingType = async(namingType: NamingConventionType) => {
+export const getValidatedInputByNamingType = async(question: string, namingType: NamingConventionType) => {
   // [todo] question should be received from arguments but from settings.json
-  const question = settings.question.componentName
 
   let isPascal: boolean = false
 

@@ -29,7 +29,7 @@ describe('getValidatedInputByNamingType', () => {
   test('should return the selected value from the prompt (valid)', async () => {
     vi.mocked(inquirer.prompt).mockResolvedValueOnce({ componentName: 'ValidComponent' })
 
-    const result = await getValidatedInputByNamingType('pascalCase')
+    const result = await getValidatedInputByNamingType('Type a component name (Recomend `PascalCase`): ', 'pascalCase')
 
     expect(result).toBe('ValidComponent')
   })
@@ -43,7 +43,7 @@ describe('getValidatedInputByNamingType', () => {
     // mockImplementation prevents actual logs from being printed during the test
     const consoleSpy = vi.spyOn(console, 'log').mockImplementation(() => {})
 
-    const result = await getValidatedInputByNamingType('pascalCase')
+    const result = await getValidatedInputByNamingType('Type a component name (Recomend `PascalCase`): ','pascalCase')
 
     expect(consoleSpy).toHaveBeenCalledWith('❌ Please use PascalCase (e.g. MyComponent)')
     expect(result).toBe('ValidComponent')

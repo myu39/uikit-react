@@ -25,7 +25,7 @@ const gcs = async () => {
   while (isContinue) {
     const componentType = await getSelectedValueFromPrompt(settings.typeChoiceOption)
 
-    const componentName = await getValidatedInputByNamingType(settings.namingConvention.componentName as NamingConventionType)
+    const componentName = await getValidatedInputByNamingType(settings.question.componentName, settings.namingConvention.componentName as NamingConventionType)
 
     const destination = getDestination(componentType, componentName)
 
