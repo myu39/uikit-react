@@ -1,5 +1,17 @@
 # React + TypeScript + Vite
 
+## Directory Structure
+
+## scripts
+
+| Directory | Description |
+| --- | --- |
+| `features` | Entrypoints grouped by feature or domain (e.g., gcs) |
+| `shared`| Reusable modules shared across features |
+| `shared/core` | Core business logic that is not related to UI or prompts |
+| `shared/prompts` | Common prompt-related modules (e.g., user input via CLI) |
+| `shared/utils` | Utility functions and helpers used across the app |
+
 ## Naming Conventions
 
 | Purpose | Naming Convention | Example |
@@ -10,7 +22,8 @@
 | types, interfaces | PascalCase | `UserInfo`, `ApiResponse` |
 | Constants | UPPER_SNAKE_CASE | `MAX_RETRIES`, `DEFAULT_TIMEOUT` |
 | Directory | kabab-case | `format-date` |
-| File | camelCase | `formatDate.ts` |
+| File for Function | camelCase | `formatDate.ts` |
+| File for Class/Component/Interface | PascalCase | `User`, `ProductService` |
 
 ## Git Commit Message
 

@@ -1,8 +1,7 @@
 import inquirer from "inquirer"
-import { isCorrectNamingConvention } from "../is-correct-naming-convention/isCorrectNamingConvention"
-
-import * as settings from "../generate-component-set/settings.json"
-import { NamingConventionType } from "../is-correct-naming-convention/NamingConvention"
+import * as settings from "../../../features/gcs/settings.json"
+import { NamingConventionType } from "../../utils/is-correct-naming-convention/NamingConvention"
+import { isCorrectNamingConvention } from "../../utils/is-correct-naming-convention/isCorrectNamingConvention"
 
 // You need to install inquirer module.
 // You can install by `npm i -D inquirer`.
@@ -14,6 +13,7 @@ import { NamingConventionType } from "../is-correct-naming-convention/NamingConv
  */
 
 export const getValidatedInputByNamingType = async(namingType: NamingConventionType) => {
+  // [todo] question should be received from arguments but from settings.json
   const question = settings.question.componentName
 
   let isPascal: boolean = false

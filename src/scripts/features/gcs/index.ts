@@ -1,9 +1,9 @@
-import { createFilesFromList } from "../create-files-from-list/createFilesFromList";
-import { getBooleanFromPrompt } from "../get-boolean-from-prompt/getBooleanFromPrompt";
-import { getSelectedValueFromPrompt } from "../get-selected-value-from-prompt/getSelectedValueFromPrompt";
-import { getValidatedInputByNamingType } from "../get-validated-input-by-naming-type/getValidatedInputByNamingType";
-import { NamingConventionType } from "../is-correct-naming-convention/NamingConvention";
-import { isExistsDirectory } from "../is-exists-directory/isExistsDirectory";
+import { createFilesFromList } from "../../create-files-from-list/createFilesFromList";
+import { getValidatedInputByNamingType } from "../../shared/core/get-validated-input-by-naming-type/getValidatedInputByNamingType";
+import { getBooleanFromPrompt } from "../../shared/prompts/get-boolean-from-prompt/getBooleanFromPrompt";
+import { getSelectedValueFromPrompt } from "../../shared/prompts/get-selected-value-from-prompt/getSelectedValueFromPrompt";
+import { NamingConventionType } from "../../shared/utils/is-correct-naming-convention/NamingConvention";
+import { isExistsDirectory } from "../../shared/utils/is-exists-directory/isExistsDirectory";
 import * as settings from './settings.json';
 
 const getDestination = (componentType: string, componentName: string) => {

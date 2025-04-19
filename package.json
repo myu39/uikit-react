@@ -12,7 +12,7 @@
     "build-storybook": "storybook build",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "gcs": "tsx src/scripts/generate-component-set/gcs.ts"
+    "gcs": "tsx src/scripts/features/gcs/index.ts"
   },
   "dependencies": {
     "react": "^19.0.0",
