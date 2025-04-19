@@ -16,7 +16,7 @@ export const getSelectedValueFromPrompt = async(config: ChoicesPromptConfig) => 
       type: "list",
       name: "choice",
       message: config.message,
-      // default: [""],
+      default: config.default,
       choices: config.choices,
     },
   ])
