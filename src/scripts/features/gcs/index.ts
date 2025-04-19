@@ -1,4 +1,4 @@
-import { createFilesFromList } from "../../create-files-from-list/createFilesFromList";
+import { createFilesFromList } from "../../shared/core/create-files-from-list/createFilesFromList";
 import { getValidatedInputByNamingType } from "../../shared/core/get-validated-input-by-naming-type/getValidatedInputByNamingType";
 import { getBooleanFromPrompt } from "../../shared/prompts/get-boolean-from-prompt/getBooleanFromPrompt";
 import { getSelectedValueFromPrompt } from "../../shared/prompts/get-selected-value-from-prompt/getSelectedValueFromPrompt";
