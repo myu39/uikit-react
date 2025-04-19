@@ -20,17 +20,22 @@ npm i -D inquirer
 
 ## Usage
 
-[Note]
-To see the flowchart, you need to install VSCode Extension: [Markdown Preview Enhanced](https://shd101wyy.github.io/markdown-preview-enhanced/#/) and [Markdown Preview Mermaid Support](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid)
-
-To preview, type `[cmd]+k` and `v`.
-
 ## Flowchart
 
 ```mermaid
-flowchart
-    A[Run Script] --> B[Ask type]
-    B --> |Component/Feature| C[Component/Feature]
-    C --> D[Ask component name]
-    D --> E[Generate files]
+flowchart TD
+    A[Run Script] --> |npm run gcs| B[Ask type<br>Component/Feature]
+    B --> |getSelectedValueFromPrompt| C[Ask component name<br>and check by naming convention]
+    C --> |getValidatedInputByNamingType| D[Check if directory exists]
+    D --> |isExistsDirectory| E{Directory exists?}
+    E --> |Yes| F[Ask to continue<br>with overwriting files]
+    F --> |getBooleanFromPrompt| G[Generate files]
+    E --> |No| G[Generate files]
+    G --> |createFilesFromList| H[End script]
+    F --> |Cancel| H[End script]
 ```
+
+### Note
+To see the flowchart, you need to install VSCode Extension: [Markdown Preview Enhanced](https://shd101wyy.github.io/markdown-preview-enhanced/#/) and [Markdown Preview Mermaid Support](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid)
+
+To preview, type `[cmd]+k` and `v`.
