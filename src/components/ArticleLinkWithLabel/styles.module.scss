@@ -1,0 +1,19 @@
+.c-article {
+  &__info {
+    display: flex;
+      gap: var(--margin-xs);
+      align-items: center;
+    font-size: calc(var(--base-font-size) * 0.85);
+  }
+
+  &__category-link,
+  &__category {
+    background-color: var(--color-primary);
+    color: var(--color-base-reverse);
+    padding: calc(var(--margin-xs) * 0.5) var(--margin-xs);
+  }
+
+  &__title {
+    margin-top: var(--margin-xs);
+  }
+}
