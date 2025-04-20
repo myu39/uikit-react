@@ -1,0 +1,28 @@
+.c-title-with-subtitle {
+  
+  &--underline {
+    position: relative;
+
+    &::after {
+      background-color: var(--border-color-primary);
+      content: '';
+      width: 40px;
+      height: 1px;
+      position: absolute;
+      bottom: calc(var(--margin-m) * -1);
+      left: 0;
+    }
+
+  }
+
+  &__title {
+    font-size: calc(12 / 16 * 1rem);
+    margin-top: 10px;
+  }
+
+  &__subtitle {
+    display: block;
+    font-size: calc(36 / 16 * 1rem);
+    letter-spacing: .3em;  // 30%
+  }
+}

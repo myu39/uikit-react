@@ -1,0 +1,26 @@
+.c-tab-indexes {
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid var(--border-color-primary);
+}
+
+.c-tab-index {
+  padding: var(--margin-xs) var(--margin-m);
+
+  &--active {
+    border-bottom: 2px solid var(--border-color-primary);
+  }
+}
+
+.c-tab-contents {
+
+}
+
+.c-tab-content {
+  display:  none;
+
+  &--active {
+    display: block;
+    width: 100%;
+  }
+}

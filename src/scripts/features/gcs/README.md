@@ -18,8 +18,6 @@ npm install -D typescript tsx
 npm i -D inquirer
 ```
 
-## Usage
-
 ## Flowchart
 
 ```mermaid
