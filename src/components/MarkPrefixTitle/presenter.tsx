@@ -1,5 +1,5 @@
-import { MarkPrefixTitleType } from "./index.types";
 import styles from "./styles.module.scss";
+import { MarkPrefixTitleType } from "./types";
 
 export const MarkPrefixTitlePresenter = ({ title, tagType, markType } : MarkPrefixTitleType) => {
   const Tag = tagType

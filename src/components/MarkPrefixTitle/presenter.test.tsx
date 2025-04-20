@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, test } from 'vitest'
-import { MarkPrefixTitleType } from './index.types'
 import { MarkPrefixTitlePresenter } from './presenter'
 import styles from "./styles.module.scss"
+import { MarkPrefixTitleType } from './types'
 
-describe('MarkPrefixTitlePresentator', () => {
+describe('MarkPrefixTitlePresenter', () => {
   const mockProps: MarkPrefixTitleType = {
     title: 'Test Title',
     tagType: 'h3',
