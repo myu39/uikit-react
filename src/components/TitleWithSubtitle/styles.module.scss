@@ -1,6 +1,8 @@
 .c-title-with-subtitle {
+  display: flex;
   
   &--underline {
+    padding-bottom: calc(var(--margin-m) * 1);
     position: relative;
 
     &::after {
@@ -9,11 +11,46 @@
       width: 40px;
       height: 1px;
       position: absolute;
-      bottom: calc(var(--margin-m) * -1);
       left: 0;
+      bottom: 0;
     }
 
   }
+
+  &--vstack {
+    // default
+    flex-direction: column;
+  }
+
+  &--vstack-reverse {
+    // default
+   flex-direction: column-reverse;
+  }
+
+  &--hstack {
+    // need to be passed a prop 'hstack'
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+  }
+
+  &--hstack-reverse {
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 1em;
+    justify-content: flex-end;
+  }
+
+  &--hwrite {
+    writing-mode: horizontal-tb;
+  }
+  &--vwrite {
+    // need to be passed a prop "vwrite"
+    writing-mode: vertical-rl;
+  }
+
+  
+
 
   &__title {
     font-size: calc(12 / 16 * 1rem);

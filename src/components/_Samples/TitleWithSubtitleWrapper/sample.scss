@@ -1,0 +1,9 @@
+.custom-wrapper {
+  background-color: yellow;
+
+  & .my-custom-class {
+    & .c-title-with-subtitle__title {
+      color: red;
+    }
+  }
+}

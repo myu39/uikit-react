@@ -1,5 +1,31 @@
 # React + TypeScript + Vite
 
+## Usage Guidelines
+
+This repository is intended to be used in web applications or websites by importing its components, functions, styles (SASS), hooks, and other utilities.
+
+To avoid unintended overwrites (e.g., style regressions) when updating the repository via `git pull`, **do not update this repository after cloning it into a project**. Treat it as a static source unless otherwise instructed.
+
+> ⚠️ In the future, this repository may be published as a GitHub Package or an npm module.
+
+### Customizing Styles
+
+If you wish to override the styles of components under `src/components` or `src/features`, **do not modify the original files directly**. Instead, wrap the component in your own and pass a `pjClass` (project class) prop or use the pure class but the CSS Modules class which the component has to apply your custom styles. These styles should live inside your own project's source tree.
+
+Here is an example of how to wrap and style a component:
+
+```tsx
+import { SimpleTitle } from "../../src/components/SimpleTitle";
+
+const CustomSimpleTitle = () => {
+  return (
+    <div className="custom-simple-title">
+      <SimpleTitle title="UI kit title" pjClass="my-custom-simple-title" />
+    </div>
+  );
+};
+```
+
 ## Directory Structure
 
 ## scripts
