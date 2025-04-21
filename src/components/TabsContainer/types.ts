@@ -1,10 +1,11 @@
-export type TabsContainerProps = {
-  tabContents: TabContentItemType[];
-  activeTab?: number;
-  onTabClick?: (index: number) => void;
+export interface TabsContainerProps {
+  tabContents: TabContentItemType[]
+  activeTab?: number
+  onTabClick: (index: number) => void;
+  pjClass?: string
 }
 
-export type TabContentItemType = {
-  index: string;
-  content: React.ReactNode;
+export interface TabContentItemType {
+  index: string
+  content: React.ReactNode
 }

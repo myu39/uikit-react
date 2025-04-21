@@ -35,6 +35,8 @@ describe('SimpleTitlePresentator', () => {
     expect(titleElement.tagName.toLowerCase()).toBe(mockH2Props.tagType)
     expect(titleElement).toHaveClass(styles["c-simple-title"])
     expect(titleElement).toHaveClass(styles[`c-simple-title--${mockH2Props.tagType}`])
+    expect(titleElement).toHaveClass("c-simple-title")
+    expect(titleElement).toHaveClass(`c-simple-title--${mockH2Props.tagType}`)
   })
 
   test('renders title with h3 tag', () => {

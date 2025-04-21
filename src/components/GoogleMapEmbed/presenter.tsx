@@ -1,9 +1,9 @@
 import styles from "./styles.module.scss"
 import { GoogleMapEmbedProps } from "./types"
 
-export const GoogleMapEmbedPresenter = ({src, id, title}: GoogleMapEmbedProps) => {
+export const GoogleMapEmbedPresenter = ({ src, id, title, pjClass }: GoogleMapEmbedProps) => {
   return (
-    <div id={id ? id : "googlemap"} className={styles['c-googlemap']}>
+    <div id={id ? id : "googlemap"} className={`${styles['c-googlemap']} c-googlemap ${pjClass ?? ""}`}>
       <iframe 
         title={title? title : "Google Map"}
         src={src}

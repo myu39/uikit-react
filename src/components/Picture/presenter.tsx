@@ -15,8 +15,10 @@ export const PicturePresenter = ({
   breakpoint
 }: PictureType) => {
 
+  const baseClass = "c-picture"
+
   return (
-    <picture className={styles['c-picture']}>
+    <picture className={`${styles[baseClass]} ${baseClass}`}>
       {srcSPWebp && 
         <source 
           srcSet={srcSPWebp} 

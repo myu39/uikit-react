@@ -20,6 +20,7 @@ export const Default: Story = {
   args: {
     src: mapURL,
     id: "mygooglemap",
-    title: "My Google Map"
+    title: "My Google Map",
+    pjClass: "my-project-class"
   }
 }

@@ -1,9 +1,10 @@
-export type ArticleLinkWithLabelType = {
-  title: string;
-  date: string;
+export interface ArticleLinkWithLabelType {
+  title: string
+  date: string
   categoryItem: {
-    name: string;
-    slug?: string;
+    name: string
+    slug?: string
   };
-  linkTo: string;
+  linkTo: string
+  pjClass?: string
 }

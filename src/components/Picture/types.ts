@@ -10,4 +10,5 @@ export type PictureType = {
   altText: string;
   isLazy?: boolean;
   breakpoint?: number
+  pjClass?: string
 }

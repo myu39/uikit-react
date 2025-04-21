@@ -26,5 +26,7 @@ describe('MarkPrefixTitlePresenter', () => {
     const element = screen.getByRole('heading')
     expect(element).toHaveClass(styles['c-marked-title'])
     expect(element).toHaveClass(styles['c-marked-title--' + mockProps.markType])
+    expect(element).toHaveClass('c-marked-title')
+    expect(element).toHaveClass('c-marked-title--' + mockProps.markType)
   })
 })
