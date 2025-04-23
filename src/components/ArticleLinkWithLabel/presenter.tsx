@@ -11,7 +11,10 @@ export const ArticleLinkWithLabelPresenter = ({
     
     <div className={`${styles[baseClass]} ${baseClass} ${pjClass ?? ""}`}>
       <div className={`${styles[baseClass + "__info"]} ${baseClass + "__info"}`}>
-        <time dateTime={date}>{date}</time>
+        {date && (
+          <time dateTime={date}>{date}</time>
+        )}
+        
         {categoryItem && (
           categoryItem.slug ? (
             <a href={categoryItem.slug && categoryItem.slug} className={`${styles[baseClass + "__category-link"]} ${baseClass + "__category-link"}`}>
