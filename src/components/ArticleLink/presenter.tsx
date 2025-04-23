@@ -3,7 +3,9 @@ import { ArticleLinkProps } from "./types"
 
 export const ArticleLinkPresenter = ({title, date, linkTo, pjClass}: ArticleLinkProps) => {
 
+  // [TODO]
   // Add prop stack type
+  // Add style
 
   const baseClass = "c-article-link"
 
