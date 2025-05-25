@@ -1,5 +1,5 @@
 export interface LinkType {
   linkText: string
-  linktTo: string
+  linkTo: string
   isExternal?: boolean
 }
